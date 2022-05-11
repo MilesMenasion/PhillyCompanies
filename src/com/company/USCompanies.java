@@ -1,13 +1,21 @@
 package com.company;
-public class USCompanies {
+public class USCompanies extends Companies {
+
     //Fields
-    String name;
-    String industy;
-    double revenue;
-    float revenuegrowth;
-    String headquarters;
+    private double revenue;
+    private double revenuegrowth;
+
+
+    public USCompanies(String name, String industry, String headquarters, double revenue, float revenuegrowth) {
+        super(name, industry, headquarters);
+        this.revenue = revenue;
+        this.revenuegrowth = revenuegrowth;
+    }
+
+
+
     //Methods
     void describe() {
-        System.out.println("This company is called " + name + ", and it's industy is " + industy + ".");
+        System.out.println("This company is called " + getName() + ", and it's industry is " + getIndustry() + ".");
     }
 }
