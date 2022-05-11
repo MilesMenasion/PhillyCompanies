@@ -6,9 +6,11 @@ public class Main {
         System.out.println("Here is a list of the largest companies");
 
         PHLCo Co1 = new PHLCo("AmerisourceBergen","Conshohocken, PA", "Pharmaceutical",10);
-        Co1.describe();
+        System.out.println(Co1);
+
 
         USCompanies Company1 = new USCompanies("Walmart", "Retail", "Bentonville, Arkansas,", 559200000, 1.9f);
-        Company1.describe();
+        System.out.println(Company1);
+
     }
 }

@@ -12,10 +12,9 @@ public class USCompanies extends Companies {
         this.revenuegrowth = revenuegrowth;
     }
 
-
-
-    //Methods
-    void describe() {
-        System.out.println("This company is called " + getName() + ", and it's industry is " + getIndustry() + ".");
+    public String toString() {
+        return "This company is called " + getName() + ", and it's industry is " + getIndustry() + ".";
     }
+
+
 }

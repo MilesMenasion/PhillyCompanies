@@ -7,7 +7,7 @@ public class PHLCo extends Companies{
     // constructors
 
     public PHLCo(String name, String hq, String industry, int rank) {
-        super(name, hq, industry);
+        super(name, industry, hq);
         this.rank = rank;
     }
 
@@ -19,8 +19,8 @@ public class PHLCo extends Companies{
         this.rank = rank;
     }
 
-    // methods
-    void describe() {
-        System.out.println("Meet " + getName() + ". It is a " + getIndustry() + " company based in " + getHeadquarters() + ". It is the " + rank + "th largest company in the US.");
+    public String toString() {
+        return "Meet " + getName() + ". It is a " + getIndustry() + " company based in " + getHeadquarters() + ". It is the " + rank + "th largest company in the US.";
     }
+    // methods
 }
