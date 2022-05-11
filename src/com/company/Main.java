@@ -10,6 +10,5 @@ public class Main {
 
         USCompanies Company1 = new USCompanies("Walmart", "Retail", "Bentonville, Arkansas,", 559200000, 1.9f);
         Company1.describe();
-        //miles wuz here
     }
 }
