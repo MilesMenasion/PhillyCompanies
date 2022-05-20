@@ -1,34 +1,38 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Companies {
     // fields
+    static private ArrayList<Companies> allMyCompanies;
     private String name;
     private String industry;
     private String headquarters;
 
     // constructor
 
-    public String getName() {
+
+    protected String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    protected void setName(String name) {
         this.name = name;
     }
 
-    public String getIndustry() {
+    protected String getIndustry() {
         return industry;
     }
 
-    public void setIndustry(String industry) {
+    protected void setIndustry(String industry) {
         this.industry = industry;
     }
 
-    public String getHeadquarters() {
+    protected String getHeadquarters() {
         return headquarters;
     }
 
-    public void setHeadquarters(String headquarters) {
+    protected void setHeadquarters(String headquarters) {
         this.headquarters = headquarters;
     }
 
@@ -36,6 +40,14 @@ public class Companies {
         this.name = name;
         this.industry = industry;
         this.headquarters = headquarters;
-
+        if (allMyCompanies == null) {
+            allMyCompanies = new ArrayList<Companies>();
+        }
+        allMyCompanies.add(this);
     }
+
+    static void describeAll() {
+        System.out.println(allMyCompanies);
+    }
+
 }
